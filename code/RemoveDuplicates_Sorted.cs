@@ -85,12 +85,6 @@ namespace code
 
             return numsLength - numDupes;
         }
-
-        private void PrintArray(int[] array)
-        {
-            array.ToList().ForEach(i => Console.Write(i + " "));
-            Console.WriteLine();
-        }
     }
 
 

@@ -11,7 +11,7 @@ namespace code
         static void Main(string[] args)
         {
             Solution s = new Solution();
-            s.SingleNumber();
+            s.RotateImage();
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
