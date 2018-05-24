@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Helpers.cs" />
     <Compile Include="IsPalindrome.cs" />
+    <Compile Include="LongestCommonPrefix.cs" />
     <Compile Include="ReverseString.cs" />
     <Compile Include="RotateImage.cs" />
     <Compile Include="StrStr.cs" />
