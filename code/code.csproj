@@ -47,6 +47,7 @@
     <Compile Include="IsPalindrome.cs" />
     <Compile Include="ReverseString.cs" />
     <Compile Include="RotateImage.cs" />
+    <Compile Include="StrStr.cs" />
     <Compile Include="TwoSum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
