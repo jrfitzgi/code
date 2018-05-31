@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace code
         static void Main(string[] args)
         {
             Solution s = new Solution();
-            s.RotateImage();
+            s.IsSymmetric();
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }

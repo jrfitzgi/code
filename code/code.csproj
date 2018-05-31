@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="LinkedList\DeleteNode.cs" />
     <Compile Include="Helpers.cs" />
+    <Compile Include="LinkedList\IsPalindrome.cs" />
     <Compile Include="Strings\FirstUniqueChar.cs" />
     <Compile Include="Strings\IsPalindrome.cs" />
     <Compile Include="Strings\LongestCommonPrefix.cs" />
@@ -61,6 +62,8 @@
     <Compile Include="Array\RotateArray.cs" />
     <Compile Include="Array\RemoveDuplicates_Sorted.cs" />
     <Compile Include="Array\RemoveDuplicates_Unsorted.cs" />
+    <Compile Include="Trees\MaxDepth.cs" />
+    <Compile Include="Trees\SymmetricTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

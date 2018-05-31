@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace code.Trees
+namespace code
 {
     /*
     Given a binary tree, find its maximum depth.
@@ -12,16 +12,16 @@ namespace code.Trees
     Note: A leaf is a node with no children.
     https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/555/
     */
+   
+    // Definition for a binary tree node.
+    public class TreeNode
+    {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+        public TreeNode(int x) { val = x; }
+    }
 
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     public int val;
-     *     public TreeNode left;
-     *     public TreeNode right;
-     *     public TreeNode(int x) { val = x; }
-     * }
-     */
     public partial class Solution
     {
         public int MaxDepth(TreeNode root)
