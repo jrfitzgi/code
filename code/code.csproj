@@ -43,21 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LinkedList\DeleteNode.cs" />
     <Compile Include="Helpers.cs" />
-    <Compile Include="IsPalindrome.cs" />
-    <Compile Include="LongestCommonPrefix.cs" />
-    <Compile Include="ReverseString.cs" />
-    <Compile Include="RotateImage.cs" />
-    <Compile Include="StrStr.cs" />
-    <Compile Include="TwoSum.cs" />
+    <Compile Include="Strings\FirstUniqueChar.cs" />
+    <Compile Include="Strings\IsPalindrome.cs" />
+    <Compile Include="Strings\LongestCommonPrefix.cs" />
+    <Compile Include="LinkedList\ReverseList.cs" />
+    <Compile Include="Strings\ReverseString.cs" />
+    <Compile Include="Array\RotateImage.cs" />
+    <Compile Include="Strings\StrStr.cs" />
+    <Compile Include="Array\TwoSum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PascalsTriangle.cs" />
-    <Compile Include="PlusOne.cs" />
-    <Compile Include="SingleNumber.cs" />
-    <Compile Include="RotateArray.cs" />
-    <Compile Include="RemoveDuplicates_Sorted.cs" />
-    <Compile Include="RemoveDuplicates_Unsorted.cs" />
+    <Compile Include="Others\PascalsTriangle.cs" />
+    <Compile Include="Array\PlusOne.cs" />
+    <Compile Include="Array\SingleNumber.cs" />
+    <Compile Include="Array\RotateArray.cs" />
+    <Compile Include="Array\RemoveDuplicates_Sorted.cs" />
+    <Compile Include="Array\RemoveDuplicates_Unsorted.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
