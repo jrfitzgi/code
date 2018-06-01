@@ -63,6 +63,7 @@
     <Compile Include="Array\RemoveDuplicates_Sorted.cs" />
     <Compile Include="Array\RemoveDuplicates_Unsorted.cs" />
     <Compile Include="Trees\MaxDepth.cs" />
+    <Compile Include="Trees\SortedArrayToBST.cs" />
     <Compile Include="Trees\SymmetricTree.cs" />
   </ItemGroup>
   <ItemGroup>
