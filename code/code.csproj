@@ -46,6 +46,8 @@
     <Compile Include="LinkedList\DeleteNode.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="LinkedList\IsPalindrome.cs" />
+    <Compile Include="SortingAndSearching\FirstBadVersion.cs" />
+    <Compile Include="SortingAndSearching\MergeSortedArray.cs" />
     <Compile Include="Strings\FirstUniqueChar.cs" />
     <Compile Include="Strings\IsPalindrome.cs" />
     <Compile Include="Strings\LongestCommonPrefix.cs" />

@@ -12,7 +12,7 @@ namespace code
         static void Main(string[] args)
         {
             Solution s = new Solution();
-            s.SortedArrayToBST();
+            s.FirstBadVersion();
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
