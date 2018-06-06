@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\ShuffleArray.cs" />
     <Compile Include="DynamicProgramming\ClimbStairs.cs" />
+    <Compile Include="DynamicProgramming\MaxProfit.cs" />
+    <Compile Include="DynamicProgramming\MaxSubArray.cs" />
     <Compile Include="LinkedList\DeleteNode.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="LinkedList\IsPalindrome.cs" />
