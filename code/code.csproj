@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\MinStack.cs" />
     <Compile Include="Design\ShuffleArray.cs" />
     <Compile Include="DynamicProgramming\ClimbStairs.cs" />
     <Compile Include="DynamicProgramming\MaxProfit.cs" />
