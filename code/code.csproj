@@ -51,6 +51,8 @@
     <Compile Include="LinkedList\DeleteNode.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="LinkedList\IsPalindrome.cs" />
+    <Compile Include="Math\CountPrimes.cs" />
+    <Compile Include="Math\FizzBuzz.cs" />
     <Compile Include="SortingAndSearching\FirstBadVersion.cs" />
     <Compile Include="SortingAndSearching\MergeSortedArray.cs" />
     <Compile Include="Strings\FirstUniqueChar.cs" />
