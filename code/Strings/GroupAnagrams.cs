@@ -30,7 +30,7 @@ namespace code.Strings
                 }
             }
 
-            List<List<string>> result = new List<List<string>>();
+            IList<IList<string>> result = new List<IList<string>>();
             foreach (string key in dict.Keys)
             {
                 result.Add(dict[key]);
