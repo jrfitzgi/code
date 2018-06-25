@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace code.Graphs
+namespace code.Graphs.NumIslands
 {
     // Given a 2d grid map of '1's (land) and '0's (water), count the number of islands.
     // An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. 
@@ -12,7 +12,7 @@ namespace code.Graphs
 
     // https://leetcode.com/explore/interview/card/top-interview-questions-medium/108/trees-and-graphs/792/
 
-    public partial class Solution
+    public class Solution
     {
         public int NumIslands(char[,] grid)
         {
@@ -45,29 +45,24 @@ namespace code.Graphs
             int rows = grid.GetLength(0);
             int cols = grid.GetLength(1);
 
-            Tuple<int, int> node = new Tuple<int, int>(r, c);
-            Queue<Tuple<int, int>> q = new Queue<Tuple<int, int>>();
-            q.Enqueue(node);
-
-            while (q.Count > 0)
+            if (r < 0 || r > rows - 1 || c < 0 || c > cols - 1)
             {
-                node = q.Dequeue();
-                r = node.Item1;
-                c = node.Item2;
-                grid[r, c] = '2';
-
-                // check left
-                if (c - 1 >= 0 && grid[r, c - 1] == '1') { q.Enqueue(new Tuple<int, int>(r, c - 1)); }
-
-                // check right
-                if (c + 1 <= cols - 1 && grid[r, c + 1] == '1') { q.Enqueue(new Tuple<int, int>(r, c + 1)); }
-
-                // check above
-                if (r - 1 >= 0 && grid[r - 1, c] == '1') { q.Enqueue(new Tuple<int, int>(r - 1, c)); }
-
-                // check below
-                if (r + 1 <= rows - 1 && grid[r + 1, c] == '1') { q.Enqueue(new Tuple<int, int>(r + 1, c)); }
+                return;
             }
+
+            if (grid[r, c] != '1')
+            {
+                return;
+            }
+
+            grid[r, c] = '2';
+
+            TraverseIsland(grid, r - 1, c);
+            TraverseIsland(grid, r + 1, c);
+            TraverseIsland(grid, r, c - 1);
+            TraverseIsland(grid, r, c + 1);
+
+
         }
 
         private void ResetGrid(char[,] grid)
