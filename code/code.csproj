@@ -51,6 +51,7 @@
     <Compile Include="Graphs\Graph.cs" />
     <Compile Include="Graphs\GraphBFS.cs" />
     <Compile Include="Graphs\NumIslands.cs" />
+    <Compile Include="LinkedList\AddTwoNumbers.cs" />
     <Compile Include="LinkedList\DeleteNode.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="LinkedList\IsPalindrome.cs" />
