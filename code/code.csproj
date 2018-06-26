@@ -67,6 +67,7 @@
     <Compile Include="SortingAndSearching\FirstBadVersion.cs" />
     <Compile Include="SortingAndSearching\MergeSort.cs" />
     <Compile Include="SortingAndSearching\MergeSortedArray.cs" />
+    <Compile Include="SortingAndSearching\QuickSort.cs" />
     <Compile Include="Strings\FirstUniqueChar.cs" />
     <Compile Include="Strings\GroupAnagrams.cs" />
     <Compile Include="Strings\IsPalindrome.cs" />
