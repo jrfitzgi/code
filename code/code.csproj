@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backtracking\GenerateParenthesis.cs" />
+    <Compile Include="Backtracking\LetterCombinations.cs" />
     <Compile Include="Design\MinStack.cs" />
     <Compile Include="Design\ShuffleArray.cs" />
     <Compile Include="DynamicProgramming\ClimbStairs.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="LinkedList\AddTwoNumbers.cs" />
     <Compile Include="LinkedList\DeleteNode.cs" />
     <Compile Include="Helpers.cs" />
+    <Compile Include="LinkedList\GetIntersectionNode.cs" />
     <Compile Include="LinkedList\IsPalindrome.cs" />
     <Compile Include="Math\CountPrimes.cs" />
     <Compile Include="Math\FizzBuzz.cs" />
@@ -62,6 +65,7 @@
     <Compile Include="Others\HammingWeight.cs" />
     <Compile Include="Others\ValidParentheses.cs" />
     <Compile Include="SortingAndSearching\FirstBadVersion.cs" />
+    <Compile Include="SortingAndSearching\MergeSort.cs" />
     <Compile Include="SortingAndSearching\MergeSortedArray.cs" />
     <Compile Include="Strings\FirstUniqueChar.cs" />
     <Compile Include="Strings\GroupAnagrams.cs" />
