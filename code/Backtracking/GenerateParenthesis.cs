@@ -20,37 +20,34 @@ namespace code.Backtracking.GenerateParenthesis
 
     //https://leetcode.com/explore/interview/card/top-interview-questions-medium/109/backtracking/794/
 
-
     public class Solution
     {
         public IList<string> GenerateParenthesis(int n)
         {
-            List<string> list = new List<string>();
-            string cur = String.Empty;
-            Backtrack(list, cur, 0, 0, n);
-            return list;
+            List<string> results = new List<string>();
+            Helper(results, String.Empty, n, 0, 0);
+
+            return results;
         }
 
-        private void Backtrack(List<string> list, string cur, int opened, int closed, int n)
+        private void Helper(List<string> results, string current, int n, int opened, int closed)
         {
-            // If this is a final answer, add it to the list and return
-            if (cur.Length == n * 2)
+            if (current.Length == n * 2)
             {
-                list.Add(cur);
+                results.Add(current);
                 return;
             }
 
-            // add an open paren and recurse
             if (opened < n)
             {
-                Backtrack(list, cur + "(", opened + 1, closed, n);
+                Helper(results, current + "(", n, opened + 1, closed);
             }
 
-            // add a closed paren and recurse
             if (closed < opened)
             {
-                Backtrack(list, cur + ")", opened, closed + 1, n);
+                Helper(results, current + ")", n, opened, closed + 1);
             }
         }
+
     }
 }
