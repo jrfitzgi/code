@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Backtracking\GenerateParenthesis.cs" />
     <Compile Include="Backtracking\LetterCombinations.cs" />
+    <Compile Include="Backtracking\Permutations.cs" />
+    <Compile Include="Backtracking\Subsets.cs" />
     <Compile Include="Design\MinStack.cs" />
     <Compile Include="Design\ShuffleArray.cs" />
     <Compile Include="DynamicProgramming\ClimbStairs.cs" />
