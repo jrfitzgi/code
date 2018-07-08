@@ -70,6 +70,7 @@
     <Compile Include="SortingAndSearching\MergeSort.cs" />
     <Compile Include="SortingAndSearching\MergeSortedArray.cs" />
     <Compile Include="SortingAndSearching\QuickSort.cs" />
+    <Compile Include="SortingAndSearching\SearchRange.cs" />
     <Compile Include="SortingAndSearching\SortColors.cs" />
     <Compile Include="Strings\FirstUniqueChar.cs" />
     <Compile Include="Strings\GroupAnagrams.cs" />
