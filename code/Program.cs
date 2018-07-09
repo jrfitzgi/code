@@ -11,7 +11,7 @@ namespace code
     {
         static void Main(string[] args)
         {
-            code.SortingAndSearching.QuickSort.QuickSort.Run();
+            code.SortingAndSearching.SearchRange.Solution.Run();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();

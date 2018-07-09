@@ -37,38 +37,59 @@ namespace code.SortingAndSearching.SearchRange
 
             if (nums == null || nums.Count() == 0) { return result; }
 
-            result = Helper(nums, target, 0, nums.Count() - 1);
+            result[0] = FindLeft(nums, target);
+            if (result[0] == -1) { return result; }
+            result[1] = FindRight(nums, target);
 
             return result;
         }
 
-        private int[] Helper(int[] nums, int target, int start, int end)
+        private int FindLeft(int[] nums, int target)
         {
-            int[] result = new int[2] { -1, -1 };
+            int start = 0;
+            int end = nums.Count() - 1;
 
-            if (start == end)
+
+            while (start < end)
             {
-                if (nums[start] == target)
-                {
-                    result[0] = start;
-                    result[1] = start;
-                }
+                int mid = (start + end) / 2;
 
-                return result;
+                if (target <= nums[mid])
+                {
+                    end = mid;
+                }
+                else
+                {
+                    start = mid + 1;
+                }
             }
 
-            int mid = (start + end) / 2;
+            if (nums[start] != target) { return -1; }
+            else { return start; }
+        }
 
-            int[] left = Helper(nums, target, start, mid);
-            int[] right = Helper(nums, target, mid + 1, end);
+        private int FindRight(int[] nums, int target)
+        {
+            int start = 0;
+            int end = nums.Count() - 1;
 
-            if (left[0] != -1) { result[0] = left[0]; }
-            else if (right[0] != -1) { result[0] = right[0]; }
 
-            if (right[1] != -1) { result[1] = right[1]; }
-            else if (left[1] != -1) { result[1] = left[1]; }
+            while (start < end)
+            {
+                int mid = (start + end) / 2 + 1;
 
-            return result;
+                if (target < nums[mid])
+                {
+                    end = mid - 1;
+                }
+                else
+                {
+                    start = mid;
+                }
+            }
+
+            if (nums[start] != target) { return -1; }
+            else { return start; }
         }
     }
 }
