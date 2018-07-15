@@ -66,10 +66,13 @@
     <Compile Include="Others\HammingDistance.cs" />
     <Compile Include="Others\HammingWeight.cs" />
     <Compile Include="Others\ValidParentheses.cs" />
+    <Compile Include="SortingAndSearching\BinarySearch.cs" />
     <Compile Include="SortingAndSearching\FirstBadVersion.cs" />
+    <Compile Include="SortingAndSearching\MergeIntervals.cs" />
     <Compile Include="SortingAndSearching\MergeSort.cs" />
     <Compile Include="SortingAndSearching\MergeSortedArray.cs" />
     <Compile Include="SortingAndSearching\QuickSort.cs" />
+    <Compile Include="SortingAndSearching\SearchInRotatedSortedArray.cs" />
     <Compile Include="SortingAndSearching\SearchRange.cs" />
     <Compile Include="SortingAndSearching\SortColors.cs" />
     <Compile Include="Strings\FirstUniqueChar.cs" />
