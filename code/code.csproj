@@ -73,6 +73,7 @@
     <Compile Include="SortingAndSearching\MergeSortedArray.cs" />
     <Compile Include="SortingAndSearching\QuickSort.cs" />
     <Compile Include="SortingAndSearching\SearchInRotatedSortedArray.cs" />
+    <Compile Include="SortingAndSearching\SearchMatrix.cs" />
     <Compile Include="SortingAndSearching\SearchRange.cs" />
     <Compile Include="SortingAndSearching\SortColors.cs" />
     <Compile Include="Strings\FirstUniqueChar.cs" />

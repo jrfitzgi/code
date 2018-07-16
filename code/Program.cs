@@ -11,7 +11,7 @@ namespace code
     {
         static void Main(string[] args)
         {
-            code.SortingAndSearching.BinarySearch.Solution.Test();
+            code.SortingAndSearching.SearchMatrix.Solution.Test();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
