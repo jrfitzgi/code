@@ -102,6 +102,8 @@
     <Compile Include="Array\RotateArray.cs" />
     <Compile Include="Array\RemoveDuplicates_Sorted.cs" />
     <Compile Include="Array\RemoveDuplicates_Unsorted.cs" />
+    <Compile Include="Trees\Implementation\MaxHeap.cs" />
+    <Compile Include="Trees\Implementation\TestHeap.cs" />
     <Compile Include="Trees\InOrderTraversal.cs" />
     <Compile Include="Trees\MaxDepth.cs" />
     <Compile Include="Trees\SortedArrayToBST.cs" />

@@ -11,7 +11,7 @@ namespace code
     {
         static void Main(string[] args)
         {
-            code.Graphs.Implementation.GraphTests.Run();
+            code.Trees.Implementation.TestHeap.Run();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
