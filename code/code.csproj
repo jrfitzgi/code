@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Array\SetZeroes.cs" />
+    <Compile Include="Array\ThreeSum.cs" />
     <Compile Include="Backtracking\GenerateParenthesis.cs" />
     <Compile Include="Backtracking\LetterCombinations.cs" />
     <Compile Include="Backtracking\Permutations.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Others\HammingWeight.cs" />
     <Compile Include="Others\ValidParentheses.cs" />
     <Compile Include="SortingAndSearching\BinarySearch.cs" />
+    <Compile Include="SortingAndSearching\Comparer.cs" />
     <Compile Include="SortingAndSearching\FirstBadVersion.cs" />
     <Compile Include="SortingAndSearching\MergeIntervals.cs" />
     <Compile Include="SortingAndSearching\MergeSort.cs" />
