@@ -11,7 +11,7 @@ namespace code
     {
         static void Main(string[] args)
         {
-            code.Arrays.SetZeroes.Solution.Run();
+            code.Trees.Implementation.Trie.Run();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();

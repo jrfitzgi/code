@@ -8,7 +8,7 @@ namespace code.SortingAndSearching.BinarySearch
 {
     class Solution
     {
-        public static void Test()
+        public static void Run()
         {
             int[] nums = new int[6] { 2, 4, 6, 6, 8, 10 };
             int target = 6;

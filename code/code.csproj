@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Array\SetZeroes.cs" />
-    <Compile Include="Array\ThreeSum.cs" />
+    <Compile Include="Arrays\LongestPalindrome.cs" />
+    <Compile Include="Arrays\SetZeroes.cs" />
+    <Compile Include="Arrays\ThreeSum.cs" />
     <Compile Include="Backtracking\GenerateParenthesis.cs" />
     <Compile Include="Backtracking\LetterCombinations.cs" />
     <Compile Include="Backtracking\Permutations.cs" />
@@ -56,8 +57,10 @@
     <Compile Include="DynamicProgramming\CoinChange.cs" />
     <Compile Include="DynamicProgramming\LengthOfLIS.cs" />
     <Compile Include="DynamicProgramming\MaxProfit.cs" />
+    <Compile Include="DynamicProgramming\MaxProfit2.cs" />
     <Compile Include="DynamicProgramming\MaxSubArray.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
+    <Compile Include="DynamicProgramming\WordBreak.cs" />
     <Compile Include="Graphs\Graph.cs" />
     <Compile Include="Graphs\GraphBFS.cs" />
     <Compile Include="Graphs\Implementation\AdjacencyList.cs" />
@@ -77,6 +80,7 @@
     <Compile Include="Others\HammingWeight.cs" />
     <Compile Include="Others\ValidParentheses.cs" />
     <Compile Include="SortingAndSearching\BinarySearch.cs" />
+    <Compile Include="SortingAndSearching\BinarySearch2.cs" />
     <Compile Include="SortingAndSearching\Comparer.cs" />
     <Compile Include="SortingAndSearching\FirstBadVersion.cs" />
     <Compile Include="SortingAndSearching\MergeIntervals.cs" />
@@ -94,19 +98,20 @@
     <Compile Include="Strings\LongestCommonPrefix.cs" />
     <Compile Include="LinkedList\ReverseList.cs" />
     <Compile Include="Strings\ReverseString.cs" />
-    <Compile Include="Array\RotateImage.cs" />
+    <Compile Include="Arrays\RotateImage.cs" />
     <Compile Include="Strings\StrStr.cs" />
-    <Compile Include="Array\TwoSum.cs" />
+    <Compile Include="Arrays\TwoSum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Others\PascalsTriangle.cs" />
-    <Compile Include="Array\PlusOne.cs" />
-    <Compile Include="Array\SingleNumber.cs" />
-    <Compile Include="Array\RotateArray.cs" />
-    <Compile Include="Array\RemoveDuplicates_Sorted.cs" />
-    <Compile Include="Array\RemoveDuplicates_Unsorted.cs" />
+    <Compile Include="Arrays\PlusOne.cs" />
+    <Compile Include="Arrays\SingleNumber.cs" />
+    <Compile Include="Arrays\RotateArray.cs" />
+    <Compile Include="Arrays\RemoveDuplicates_Sorted.cs" />
+    <Compile Include="Arrays\RemoveDuplicates_Unsorted.cs" />
     <Compile Include="Trees\Implementation\MaxHeap.cs" />
     <Compile Include="Trees\Implementation\TestHeap.cs" />
+    <Compile Include="Trees\Implementation\Trie.cs" />
     <Compile Include="Trees\InOrderTraversal.cs" />
     <Compile Include="Trees\MaxDepth.cs" />
     <Compile Include="Trees\SortedArrayToBST.cs" />
