@@ -59,6 +59,7 @@
     <Compile Include="DynamicProgramming\MaxProfit.cs" />
     <Compile Include="DynamicProgramming\MaxProfit2.cs" />
     <Compile Include="DynamicProgramming\MaxSubArray.cs" />
+    <Compile Include="DynamicProgramming\NumSquares.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="DynamicProgramming\WordBreak.cs" />
     <Compile Include="Graphs\Graph.cs" />

@@ -40,6 +40,33 @@ namespace code.Graphs.Implementation
             Queue<int> q = new Queue<int>();
             q.Enqueue(start);
             visited[start] = true;
+
+            while (q.Count() > 0)
+            {
+                int node = q.Dequeue();
+                Console.Write(node + ".");
+
+                List<int> adjacent = this.data[node];
+                for (int i=0; i < adjacent.Count; i++)
+                {
+                    if (!visited[adjacent[i]])
+                    {
+                        q.Enqueue(adjacent[i]);
+                        visited[adjacent[i]] = true;
+                    }
+                }
+            }
+
+            Console.WriteLine();
+        }
+
+        public void BFS2(int start)
+        {
+            bool[] visited = new bool[this.size];
+
+            Queue<int> q = new Queue<int>();
+            q.Enqueue(start);
+            visited[start] = true;
             
             while (q.Count > 0)
             {
@@ -150,6 +177,36 @@ namespace code.Graphs.Implementation
         }
 
         public override void DFS(int start)
+        {
+            HashSet<int> visited = new HashSet<int>();
+
+            Stack<int> stack = new Stack<int>();
+            stack.Push(start);
+            visited.Add(start);
+
+            while (stack.Count() > 0)
+            {
+                int node = stack.Pop();
+                Console.Write(node + ".");
+                
+                List<int> adjacent = this.data[node];
+                for (int i=0; i < adjacent.Count(); i++)
+                {
+                    int child = adjacent[i];
+                    if (!visited.Contains(child))
+                    {
+                        stack.Push(child);
+                        visited.Add(child);
+                    }
+                }
+
+            }
+
+            Console.WriteLine();
+
+        }
+
+        public void DFS2(int start)
         {
             HashSet<int> visited = new HashSet<int>();
 
@@ -294,6 +351,41 @@ namespace code.Graphs.Implementation
 
         public override void TopologicalSort()
         {
+            Stack<int> stack = new Stack<int>();
+            bool[] visited = new bool[this.size];
+
+            for (int i=0; i < this.data.Length; i++)
+            {
+                TopologicalSort_Helper(i, stack, visited);
+            }
+
+            while (stack.Count() > 0)
+            {
+                Console.Write(stack.Pop() + ".");
+            }
+
+            Console.WriteLine();
+        }
+
+        private void TopologicalSort_Helper(int v, Stack<int> stack, bool[] visited)
+        {
+            if (visited[v]) { return; }
+            visited[v] = true;
+
+            List<int> adj = this.data[v];
+            for (int i=0; i < adj.Count(); i++)
+            {
+                int child = adj[i];
+                TopologicalSort_Helper(child, stack, visited);
+            }
+
+            stack.Push(v);
+        }
+
+        #region Topological Sort
+
+        public void TopologicalSort2()
+        {
             if (this.IsDirected == false)
             {
                 Console.WriteLine("Topological sort only applies to Directed graph");
@@ -311,7 +403,7 @@ namespace code.Graphs.Implementation
 
             for (int i=0; i < this.size; i++)
             {
-                this.TopologicalSort_Helper(sorted, visited, i);
+                this.TopologicalSort_Helper2(sorted, visited, i);
             }
 
             while (sorted.Count > 0)
@@ -322,7 +414,7 @@ namespace code.Graphs.Implementation
             Console.WriteLine();
         }
 
-        private void TopologicalSort_Helper(Stack<int> sorted, bool[] visited, int v)
+        private void TopologicalSort_Helper2(Stack<int> sorted, bool[] visited, int v)
         {
             if (visited[v] == true) { return; }
 
@@ -331,10 +423,12 @@ namespace code.Graphs.Implementation
             List<int> adj = this.data[v];
             for (int i=0; i < adj.Count; i++)
             {
-                this.TopologicalSort_Helper(sorted, visited, adj[i]);
+                this.TopologicalSort_Helper2(sorted, visited, adj[i]);
             }
 
             sorted.Push(v);
         }
+
+        #endregion
     }
 }
