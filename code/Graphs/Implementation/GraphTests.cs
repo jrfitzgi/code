@@ -10,25 +10,31 @@ namespace code.Graphs.Implementation
     {
         public static void Run()
         {
-            GraphTests.Test2();
+            GraphTests.Test1();
         }
 
         private static void Test1()
         {
-            GraphBase graph = new AdjacencyList(false, 10);
+            GraphBase graph = new AdjacencyList2(true, 10);
+            //GraphBase graph = new AdjacencyList(false, 10);
             //GraphBase graph = new AdjacencyMatrix(10, true);
 
             graph.AddEdge(1, 2);
             Console.WriteLine($"Cycle exists? {graph.CycleExists()}");
 
             graph.AddEdge(1, 3);
+            Console.WriteLine($"Cycle exists? {graph.CycleExists()}");
+
+            graph.AddEdge(2, 3);
+            Console.WriteLine($"Cycle exists? {graph.CycleExists()}");
+
             graph.AddEdge(1, 4);
             graph.AddEdge(2, 4);
             graph.AddEdge(4, 5);
             graph.AddEdge(5, 1); // creates cycle in directed graph
             graph.AddEdge(3, 6); // will remove
             graph.AddEdge(4, 6); // will remove
-
+            Console.WriteLine($"Cycle exists? {graph.CycleExists()}");
 
             Console.WriteLine($"Edge from 4 to 6? {graph.EdgeExists(4, 6)}");
             Console.WriteLine($"Path from 1 to 8? {graph.PathExists(1, 8)}");
@@ -57,7 +63,7 @@ namespace code.Graphs.Implementation
 
         private static void Test2()
         {
-            GraphBase graph = new AdjacencyList(true, 6);
+            GraphBase graph = new AdjacencyList2(true, 6);
 
             graph.AddEdge(5, 0);
             graph.AddEdge(5, 2);
@@ -71,5 +77,6 @@ namespace code.Graphs.Implementation
             graph.TopologicalSort();
 
         }
+
     }
 }

@@ -11,6 +11,8 @@ namespace code.Graphs.Implementation
         int[,] Matrix;
         int Size;
 
+        public override bool IsDirected { get; set; }
+
         public AdjacencyMatrix(int size, bool isDirected) : base(isDirected)
         {
             this.Matrix = new int[size, size];

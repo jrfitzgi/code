@@ -8,7 +8,7 @@ namespace code.Graphs.Implementation
 {
     public abstract class GraphBase
     {
-        public virtual bool IsDirected { get; set; }
+        public abstract bool IsDirected { get; set; }
 
         public GraphBase() : this(false)
         {

@@ -65,10 +65,12 @@
     <Compile Include="Graphs\Graph.cs" />
     <Compile Include="Graphs\GraphBFS.cs" />
     <Compile Include="Graphs\Implementation\AdjacencyList.cs" />
+    <Compile Include="Graphs\Implementation\AdjacencyList2.cs" />
     <Compile Include="Graphs\Implementation\AdjacencyMatrix.cs" />
     <Compile Include="Graphs\Implementation\GraphBase.cs" />
     <Compile Include="Graphs\Implementation\GraphTests.cs" />
     <Compile Include="Graphs\NumIslands.cs" />
+    <Compile Include="Graphs\WordLadder.cs" />
     <Compile Include="LinkedList\AddTwoNumbers.cs" />
     <Compile Include="LinkedList\DeleteNode.cs" />
     <Compile Include="Helpers.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="Arrays\RotateArray.cs" />
     <Compile Include="Arrays\RemoveDuplicates_Sorted.cs" />
     <Compile Include="Arrays\RemoveDuplicates_Unsorted.cs" />
+    <Compile Include="Strings\ValidIP.cs" />
     <Compile Include="Trees\Implementation\MaxHeap.cs" />
     <Compile Include="Trees\Implementation\TestHeap.cs" />
     <Compile Include="Trees\Implementation\Trie.cs" />

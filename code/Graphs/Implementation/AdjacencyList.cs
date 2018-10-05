@@ -12,6 +12,8 @@ namespace code.Graphs.Implementation
         private List<int>[] data;
         private int size;
 
+        public override bool IsDirected { get; set; }
+
         public AdjacencyList(bool isDirected, int size) : base(isDirected)
         {
             this.data = new List<int>[size];
@@ -100,11 +102,51 @@ namespace code.Graphs.Implementation
             }
         }
 
+        private bool CycleExists_Directed()
+        {
+            bool[] visited = new bool[this.size];
+            bool[] recStack = new bool[this.size];
+
+            for (int i=0; i < this.size; i++)
+            {
+
+                if (CycleExists_DirectedHelper(i, visited, recStack))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool CycleExists_DirectedHelper(int v, bool[] visited, bool[] recStack)
+        {
+            if (recStack[v]) { return true; }
+
+            if (visited[v]) { return false; }
+
+            recStack[v] = true;
+            visited[v] = true;
+
+            List<int> adj = this.data[v];
+            for (int i=0; i < adj.Count(); i++)
+            {
+                if (CycleExists_DirectedHelper(adj[i], visited, recStack))
+                {
+                    return true;
+                }
+            }
+
+            recStack[v] = false;
+
+            return false;
+        }
+
         /// <summary>
         /// implemented for undirected only
         /// </summary>
         /// <returns></returns>
-        private bool CycleExists_Directed()
+        private bool CycleExists_Directed2()
         {
             bool[] visited = new bool[this.size];
             bool[] recursionStack = new bool[this.size]; // keeps track of which vertices are in the recursion stack
@@ -113,13 +155,13 @@ namespace code.Graphs.Implementation
             {
                 if (visited[i] == true) { continue; }
 
-                if (this.CycleHelper_Directed(visited, recursionStack, i)) { return true; }
+                if (this.CycleHelper_Directed2(visited, recursionStack, i)) { return true; }
             }
 
             return false;
         }
 
-        private bool CycleHelper_Directed(bool[] visited, bool[] recursionStack, int v)
+        private bool CycleHelper_Directed2(bool[] visited, bool[] recursionStack, int v)
         {
             if (recursionStack[v] == true) { return true; } // cycle exists
 
@@ -132,7 +174,7 @@ namespace code.Graphs.Implementation
             List<int> adj = this.data[v];
             for (int i=0; i < adj.Count; i++)
             {
-                if (this.CycleHelper_Directed(visited, recursionStack, adj[i]) == true) { return true; }
+                if (this.CycleHelper_Directed2(visited, recursionStack, adj[i]) == true) { return true; }
             }
 
             recursionStack[v] = false;
@@ -147,15 +189,48 @@ namespace code.Graphs.Implementation
 
             for (int i=0; i < this.size; i++)
             {
-                if (visited[i] == true) { continue; }
+                if (visited[i]) { continue; }
 
-                if (this.CycleHelper_Undirected(visited, i, -1) == true) { return true; }
+                if (CycleExists_UndirectedHelper(i, visited, -1)) { return true; }
             }
 
             return false;
         }
 
-        private bool CycleHelper_Undirected(bool[] visited, int v, int parent)
+        private bool CycleExists_UndirectedHelper(int v, bool[] visited, int parent)
+        {
+            
+            if (visited[v]) { return true; }
+
+            visited[v] = true;
+
+            List<int> adj = this.data[v];
+            for (int i=0; i < adj.Count(); i++)
+            {
+                int child = adj[i];
+                if (child == parent) { continue; }
+
+                if (CycleExists_UndirectedHelper(child, visited, v)) { return true; }
+            }
+
+            return false;
+        }
+
+        private bool CycleExists_Undirected2()
+        {
+            bool[] visited = new bool[this.size];
+
+            for (int i=0; i < this.size; i++)
+            {
+                if (visited[i] == true) { continue; }
+
+                if (this.CycleHelper_Undirected2(visited, i, -1) == true) { return true; }
+            }
+
+            return false;
+        }
+
+        private bool CycleHelper_Undirected2(bool[] visited, int v, int parent)
         {
             visited[v] = true;
 
@@ -164,7 +239,7 @@ namespace code.Graphs.Implementation
             {
                 if (visited[adj[i]] == false)
                 {
-                    if (this.CycleHelper_Undirected(visited, adj[i], v) == true) { return true; }
+                    if (this.CycleHelper_Undirected2(visited, adj[i], v) == true) { return true; }
                 }
                 else if (adj[i] != parent)
                 {
