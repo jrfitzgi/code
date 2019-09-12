@@ -69,7 +69,9 @@
     <Compile Include="Graphs\Implementation\AdjacencyMatrix.cs" />
     <Compile Include="Graphs\Implementation\GraphBase.cs" />
     <Compile Include="Graphs\Implementation\GraphTests.cs" />
+    <Compile Include="Graphs\IslandPeaks.cs" />
     <Compile Include="Graphs\NumIslands.cs" />
+    <Compile Include="Graphs\Ratios.cs" />
     <Compile Include="Graphs\WordLadder.cs" />
     <Compile Include="LinkedList\AddTwoNumbers.cs" />
     <Compile Include="LinkedList\DeleteNode.cs" />
